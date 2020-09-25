@@ -16,12 +16,14 @@ function timeClock() {
         $('.container').append(`
         <div class= "row">
         <div class = "hour col-1">${dateTime[i]}</div>
-        <div class = "present col-8"></div>
+        <div class = "present pl-0 pr-0 col-8"><textarea></textarea></div>
         <div class = "saveBtn col-1"></div>
       </div>
         `);
     }
 }
+
+// var saveButton = localStorage.setItem()
 
 timeClock()
 //date time array, append to bootstrap date time

@@ -1,4 +1,4 @@
-var dateTime = [ '5am', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
+var dateTime = [ '5 AM', '6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM'];
 console.log(dateTime);
 
 var dateToday = moment().format("dddd, MMM Do");
@@ -10,10 +10,11 @@ $('#currentDay').append(dateToday);
 // }
 
 function timeClock() {
-    var momentTime = moment().format('HH');
+    var momentTime = parseInt(moment().format('HH'));
     console.log(momentTime);
 
     // if ()
+    
 
     for(var i = 0; i < dateTime.length; i++){
         $('.container').append(`
@@ -24,7 +25,30 @@ function timeClock() {
         </div>
         `);
     }
+
+    if (dateTime < momentTime){
+
+    }
+
 }
+
+function dateTimetoString(hourString) {
+    switch(hourString) {
+      case '5 AM': return 5;
+      case '6 AM': return 6;
+      case '7 AM': return 7;
+      case "8 AM": return 8;
+      case "9 AM": return 9;
+      case "10 AM": return 10;
+      case "11 AM": return 11;
+      case "12 PM": return 12;
+      case "1 PM": return 13;
+      case "2 PM": return 14;
+      case "3 PM": return 15;
+      case "4 PM": return 16;
+      case "5 PM": return 17;
+    }
+  }
 
 // var saveButton = localStorage.setItem()
 

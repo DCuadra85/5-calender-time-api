@@ -5,20 +5,23 @@ var dateToday = moment().format("dddd, MMM Do");
 // console.log(dateToday, "today's date test")
 $('#currentDay').append(dateToday);
 
-function dynamicTime(){
+// function dynamicTime(){
 
-}
+// }
 
 function timeClock() {
-    var momentTime = moment().format('LT');
+    var momentTime = moment().format('HH');
     console.log(momentTime);
+
+    // if ()
+
     for(var i = 0; i < dateTime.length; i++){
         $('.container').append(`
         <div class= "row">
         <div class = "hour col-1">${dateTime[i]}</div>
         <div class = "present pl-0 pr-0 col-8"><textarea></textarea></div>
         <div class = "saveBtn col-1"></div>
-      </div>
+        </div>
         `);
     }
 }

@@ -3,5 +3,8 @@ console.log(dateTime);
 
 var dateToday = moment().format("dddd, MMM Do");
 console.log(dateToday)
-$('#dateDisplay').append(dateToday);
+$('#currentDay').append(dateToday);
+
+var momentTime = moment().format('LT');
+console.log(momentTime);
 

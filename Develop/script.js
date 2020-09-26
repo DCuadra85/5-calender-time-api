@@ -2,8 +2,6 @@
 var dateTime = ['8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
 // console.log(dateTime);
 var timeSequence = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-const text = $('textarea');
-const container = [];
 
 var dateToday = moment().format("dddd, MMM Do ");
 // console.log(dateToday, "today's date test")
@@ -29,7 +27,7 @@ console.log(momentTime);
             <div class = "row">
                 
                 <div class = "hour col-1">${dateTime[i]}</div>
-                <div class = "past pl-0 pr-0 col-8"><textarea class = "storage"></textarea></div>
+                <div class = "past pl-0 pr-0 col-8"><textarea class = "storageArray"></textarea></div>
                 <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
                 
             </div>
@@ -43,7 +41,7 @@ console.log(momentTime);
             <div class = "row">
                 
                 <div class = "hour col-1">${dateTime[i]}</div>
-                <div class = "future pl-0 pr-0 col-8"><textarea class= "storage"></textarea></div>
+                <div class = "future pl-0 pr-0 col-8"><textarea class= "storageArray"></textarea></div>
                 <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
                 
             </div>
@@ -56,7 +54,7 @@ console.log(momentTime);
            
             <div class = "row">
                 <div class = "hour col-1">${dateTime[i]}</div>
-                <div class = "present pl-0 pr-0 col-8"><textarea class = "storage"></textarea></div>
+                <div class = "present pl-0 pr-0 col-8"><textarea class = "storageArray"></textarea></div>
                 <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
             
             </div>
@@ -68,24 +66,27 @@ console.log(momentTime);
     }
 }
 
+// const storage = document.querySelectorAll('storageArray')
+// console.log(storage)
 
-function pageOpen(){
-    for (var i = 0; i < textarea.length; i++){
-        container.push(localStorage.getItem(i));
-        textarea[i].value = container[i]
-    }
-}
 
-$('.saveBtn').on('click', function(){
-    var btnSave = $timeSequence[i];
-    var textSave = text[btnSave].value;
+// function pageOpen(){
+//     for (var i = 0; i < textarea.length; i++){
+//         container.push(localStorage.getItem(i));
+//         textarea[i].value = container[i]
+//     }
+// }
 
-    localStorage.setItem(btnSave, textSave)
-})
+// $('.saveBtn').on('click', function(){
+//     var btnSave = $timeSequence[i];
+//     var textSave = text[btnSave].value;
+
+//     localStorage.setItem(btnSave, textSave)
+// })
 
 
 calendarDisplay()
-pageOpen();
+// pageOpen();
 
 // document.getElementsByClassName('fas fa-save').addEventListener('click', function(){
 //     console.log(this)

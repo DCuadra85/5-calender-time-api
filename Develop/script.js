@@ -1,6 +1,6 @@
 var dateTime = ['8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
 // console.log(dateTime);
-var timeSequence = ['8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+var timeSequence = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 var dateToday = moment().format("dddd, MMM Do");
 // console.log(dateToday, "today's date test")
 $('#currentDay').append(dateToday);
@@ -8,22 +8,14 @@ $('#currentDay').append(dateToday);
 var momentTime = moment().format('HH');
 console.log(momentTime);
 
-// '12 AM', '1 AM', '2 AM', '3 AM', '4 AM',
-// '1','2','3','4',
-// '1','2','3','4','5', '6', '7', 
-// '12 AM', '1 AM', '2 AM', '3 AM', '4 AM','5 AM', '6 AM', '7 AM', 
     var timeNumber = timeSequence.join()
     console.log(timeNumber)
     console.log(momentTime)
-    // var timeString = $('.hour').text();
-    // var timeNumber = dateTimetoString(timeString);
-
 
 
     function calendarDisplay() {  
 
     for(var i = 0; i < timeSequence.length; i++){
-
         
         if (timeSequence[i] < momentTime) {
             // console.log(timeNumber)
@@ -59,9 +51,6 @@ console.log(momentTime);
         // console.log(timeNumber)
         // console.log(momentTime)
     }
-
-
-
 }
 
 // var saveButton = localStorage.setItem()
@@ -99,3 +88,11 @@ calendarDisplay()
       
     //   console.log(dateTimetoString)
 //   }
+
+    // var timeString = $('.hour').text();
+    // var timeNumber = dateTimetoString(timeString);
+
+// '12 AM', '1 AM', '2 AM', '3 AM', '4 AM',
+// '1','2','3','4',
+// '1','2','3','4','5', '6', '7', 
+// '12 AM', '1 AM', '2 AM', '3 AM', '4 AM','5 AM', '6 AM', '7 AM', 

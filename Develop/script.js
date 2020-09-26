@@ -21,31 +21,37 @@ console.log(momentTime);
             // console.log(timeNumber)
             // console.log(momentTime)
             $('.container').append(`
+            
             <div class= "row">
             <div class = "hour col-1">${dateTime[i]}</div>
             <div class = "past pl-0 pr-0 col-8"><textarea class = "storage"></textarea></div>
             <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
             </div>
+           
             `);
           } else if (timeSequence[i] > momentTime) {
             // console.log(timeNumber)
             // console.log(momentTime)
             $('.container').append(`
-            <div class= "row">
+            
+            <div class = "row">
             <div class = "hour col-1">${dateTime[i]}</div>
             <div class = "future pl-0 pr-0 col-8"><textarea class= "storage"></textarea></div>
             <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
             </div>
+          
             `);
           } else {
             // console.log(timeNumber)
             // console.log(momentTime)
             $('.container').append(`
+           
             <div class= "row">
             <div class = "hour col-1">${dateTime[i]}</div>
             <div class = "present pl-0 pr-0 col-8"><textarea class = "storage"></textarea></div>
             <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
             </div>
+            
             `);
           }
         // console.log(timeNumber)
@@ -54,17 +60,48 @@ console.log(momentTime);
 }
 calendarDisplay()
 
+function pageOpen(){
+    for (var i = 0; i < timeSequence.length; i++){
+        container.push(localStorage.getItem(i));
+        timeSequence[i].value = container[i]
+    }
+}
+
+$('.saveBtn').on('click', function(){
+    var btnSave = this.value;
+    var textSave = text[btnSave].value;
+
+    localStorage.setItem(btnSave, textSave)
+})
+
+pageOpen();
+
+// document.getElementsByClassName('fas fa-save').addEventListener('click', function(){
+//     console.log(this)
+// })
+
+// $(".fas fa-save").on("click", function(){
+//     console.log(this)
+    
+//     // var btnSave = this.value;
+
+
+//     // var textSave = textarea[i]
+//     // localStorage.setItem(btnSave, )
+// })
+
+
 
 // Store
-localStorage.setItem("lastname", "Smith");
-// Retrieve
-document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+// localStorage.setItem("lastname", "Smith");
+// // Retrieve
+// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
 
-//syntax
-window.localStorage
+// //syntax
+// window.localStorage
 
-//syntax for saving data to localstorage
-localStorage.setItem("key", "value");
+// //syntax for saving data to localstorage
+// localStorage.setItem("key", "value");
 
 //Syntax for READING data from localStorage:
 //var lastname = localStorage.getItem("key");

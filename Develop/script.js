@@ -23,8 +23,8 @@ console.log(momentTime);
             $('.container').append(`
             <div class= "row">
             <div class = "hour col-1">${dateTime[i]}</div>
-            <div class = "past pl-0 pr-0 col-8"><textarea></textarea></div>
-            <div class = "saveBtn col-1"></div>
+            <div class = "past pl-0 pr-0 col-8"><textarea class = "storage"></textarea></div>
+            <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
             </div>
             `);
           } else if (timeSequence[i] > momentTime) {
@@ -33,8 +33,8 @@ console.log(momentTime);
             $('.container').append(`
             <div class= "row">
             <div class = "hour col-1">${dateTime[i]}</div>
-            <div class = "future pl-0 pr-0 col-8"><textarea></textarea></div>
-            <div class = "saveBtn col-1"></div>
+            <div class = "future pl-0 pr-0 col-8"><textarea class= "storage"></textarea></div>
+            <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
             </div>
             `);
           } else {
@@ -43,8 +43,8 @@ console.log(momentTime);
             $('.container').append(`
             <div class= "row">
             <div class = "hour col-1">${dateTime[i]}</div>
-            <div class = "present pl-0 pr-0 col-8"><textarea></textarea></div>
-            <div class = "saveBtn col-1"></div>
+            <div class = "present pl-0 pr-0 col-8"><textarea class = "storage"></textarea></div>
+            <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
             </div>
             `);
           }
@@ -52,10 +52,35 @@ console.log(momentTime);
         // console.log(momentTime)
     }
 }
+calendarDisplay()
+
+
+// Store
+localStorage.setItem("lastname", "Smith");
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+
+//syntax
+window.localStorage
+
+//syntax for saving data to localstorage
+localStorage.setItem("key", "value");
+
+//Syntax for READING data from localStorage:
+//var lastname = localStorage.getItem("key");
+
+//Syntax for REMOVING data from localStorage:
+//localStorage.removeItem("key");
+
+
+
+// if (localStorage[".storage"]){
+//     var storage =
+// }
 
 // var saveButton = localStorage.setItem()
 
-calendarDisplay()
+
 
 
 //date time array, append to bootstrap date time

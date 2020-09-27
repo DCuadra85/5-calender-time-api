@@ -31,7 +31,7 @@
         $('#hour19').append(localStorage.getItem('hour19'));
         $('#hour20').append(localStorage.getItem('hour20'));
     }
-    
+    loadStorage();
 
     // console.log($('#text0').val())
     // $("#saveButton0").on("click", function(){

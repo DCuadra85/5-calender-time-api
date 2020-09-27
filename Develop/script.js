@@ -6,81 +6,81 @@
   
 // //.replace(/['"]+/g, '') may need this for loadstorage to work correctly.
     
-    // $(".saveBtn").on("click", function () {
-    // console.log(this);
-    //     var text = $(this).siblings('.textarea').val();
-    //     console.log(text)
-    //     var time = $(this).parent().attr('id');
-    //     console.log(time)
+    $(".saveBtn").on("click", function () {
+    console.log(this);
+        var text = $(this).siblings('.textarea').val();
+        console.log(text)
+        var time = $(this).parent().attr('id');
+        console.log(time)
 
-    //     localStorage.setItem(time, text);
+        localStorage.setItem(time, JSON.stringify(text));
 
-    // })
+    })
 
     
     // console.log($('#text0').val())
-    $("#btn1").on("click", function(){
-        var showtext0 = ($("#hour8").val());
-        localStorage.setItem('8am', JSON.stringify(showtext0));
-        console.log(showtext0)
-    })
+    // $("#btn1").on("click", function(){
+    //     var showtext0 = ($("#hour8").val());
+    //     localStorage.setItem('#hour8', JSON.stringify(showtext0));
+    //     console.log(showtext0)
+    // })
 
-    $("#btn2").on("click", function(){
-        var showtext1 = $("#hour9").val();
-        localStorage.setItem('9am', JSON.stringify(showtext1));
-    })
+    // $("#btn2").on("click", function(){
+    //     var showtext1 = $("#hour9").val();
+    //     localStorage.setItem('9am', JSON.stringify(showtext1));
+    // })
 
-    $("#btn3").on("click", function(){
-        var showtext2 = $("#hour10").val();
-        localStorage.setItem('10am', JSON.stringify(showtext2));
-    })
-    $("#btn4").on("click", function(){
-        var showtext3 = $("#hour11").val();
-        localStorage.setItem('11am', JSON.stringify(showtext3));
-    })
+    // $("#btn3").on("click", function(){
+    //     var showtext2 = $("#hour10").val();
+    //     localStorage.setItem('10am', JSON.stringify(showtext2));
+    // })
+    // $("#btn4").on("click", function(){
+    //     var showtext3 = $("#hour11").val();
+    //     localStorage.setItem('11am', JSON.stringify(showtext3));
+    // })
 
-    $("#btn5").on("click", function(){
-        var showtext4 = $("#hour12").val();
-        localStorage.setItem('12pm', JSON.stringify(showtext4));
-    })
+    // $("#btn5").on("click", function(){
+    //     var showtext4 = $("#hour12").val();
+    //     localStorage.setItem('12pm', JSON.stringify(showtext4));
+    // })
 
-    $("#btn6").on("click", function(){
-        var showtext5 = $("#hour13").val();
-        localStorage.setItem('1pm', JSON.stringify(showtext5));
-    })
-    $("#btn7").on("click", function(){
-        var showtext6 = $("#hour14").val();
-        localStorage.setItem('2pm', JSON.stringify(showtext6));
-    })
+    // $("#btn6").on("click", function(){
+    //     var showtext5 = $("#hour13").val();
+    //     localStorage.setItem('1pm', JSON.stringify(showtext5));
+    // })
+    // $("#btn7").on("click", function(){
+    //     var showtext6 = $("#hour14").val();
+    //     localStorage.setItem('2pm', JSON.stringify(showtext6));
+    // })
 
-    $("#btn8").on("click", function(){
-        var showtext7 = $("#hour15").val();
-        localStorage.setItem('3pm', JSON.stringify(showtext7));
-    })
+    // $("#btn8").on("click", function(){
+    //     var showtext7 = $("#hour15").val();
+    //     localStorage.setItem('3pm', JSON.stringify(showtext7));
+    // })
 
-    $("#btn9").on("click", function(){
-        var showtext8 = $("#hour16").val();
-        localStorage.setItem('4pm', JSON.stringify(showtext8));
-    })
-    $("#btn10").on("click", function(){
-        var showtext9 = $("#hour17").val();
-        localStorage.setItem('5pm', JSON.stringify(showtext9));
-    })
+    // $("#btn9").on("click", function(){
+    //     var showtext8 = $("#hour16").val();
+    //     localStorage.setItem('4pm', JSON.stringify(showtext8));
+    // })
+    // $("#btn10").on("click", function(){
+    //     var showtext9 = $("#hour17").val();
+    //     localStorage.setItem('5pm', JSON.stringify(showtext9));
+    // })
 
-    $("#btn11").on("click", function(){
-        var showtext10 = $("#hour18").val();
-        localStorage.setItem('6pm', JSON.stringify(showtext10));
-    })
+    // $("#btn11").on("click", function(){
+    //     var showtext10 = $("#hour18").val();
+    //     localStorage.setItem('6pm', JSON.stringify(showtext10));
+    // })
 
-    $("#btn12").on("click", function(){
-        var showtext11 = $("#hour19").val();
-        localStorage.setItem('7pm', JSON.stringify(showtext11));
-    })
+    // $("#btn12").on("click", function(){
+    //     var showtext11 = $("#hour19").val();
+    //     localStorage.setItem('7pm', JSON.stringify(showtext11));
+    // })
 
-    $("#btn13").on("click", function(){
-        var showtext12 = $("#hour20").val();
-        localStorage.setItem('8pm', JSON.stringify(showtext12));
-    })
+    // $("#btn13").on("click", function(){
+    //     var showtext12 = $("#hour20").val();
+    //     localStorage.setItem('8pm', JSON.stringify(showtext12));
+    // })
 
 
     function loadStorage(){

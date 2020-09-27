@@ -109,133 +109,30 @@ console.log(momentTime);
 
     function calendarDisplay() {  
 
-    for(var i = 0; i < timeSequence.length; i++){
-        
-        if (timeSequence[i] < momentTime) {
-            // console.log(timeNumber)
-            // console.log(momentTime)
-        
-                $('.textarea').addClass("past")
-            ;
-          } else if (timeSequence[i] > momentTime) {
-            // console.log(timeNumber)
-            // console.log(momentTime)
-      
-                $('.textarea').addClass("future")
-            ;
-          } else {
-            // console.log(timeNumber)
-            // console.log(momentTime)
-           
-                $('.textarea').addClass("present")
-            ;
-          }
-        // console.log(timeNumber)
-        // console.log(momentTime)
-    }
-}
+        $(".time-block").each(function () {
+            var hourBlock = parseInt($(this).attr('id').split('hour')[1]);
+            console.log(hourBlock, momentTime)    
+            
+            if (hourBlock < momentTime){
+                $(this).addClass('past');
+                $(this).removeClass('future')
+                $(this).removeClass('present')
+            } 
+            
+            else if (hourBlock > momentTime) {
+                $(this).removeClass('past');
+                $(this).addClass('future');
+                $(this).removeClass('present')
+            }
 
-// const storage = document.querySelectorAll('storageArray')
-// console.log(storage)
+            else {
+                $(this).removeClass('past');
+                $(this).addClass('present');
+                $(this).removeClass('future')
+            }
 
-
-// function pageOpen(){
-//     for (var i = 0; i < textarea.length; i++){
-//         container.push(localStorage.getItem(i));
-//         textarea[i].value = container[i]
-//     }
-// }
-
-// $('.saveBtn').on('click', function(){
-//     var btnSave = $timeSequence[i];
-//     var textSave = text[btnSave].value;
-
-//     localStorage.setItem(btnSave, textSave)
-// })
+        })
+    }   
 
 
 calendarDisplay()
-// pageOpen();
-
-// document.getElementsByClassName('fas fa-save').addEventListener('click', function(){
-//     console.log(this)
-// })
-
-// $(".fas fa-save").on("click", function(){
-//     console.log(this)
-    
-//     // var btnSave = this.value;
-
-
-//     // var textSave = textarea[i]
-//     // localStorage.setItem(btnSave, )
-// })
-
-
-
-// Store
-// localStorage.setItem("lastname", "Smith");
-// // Retrieve
-// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-
-// //syntax
-// window.localStorage
-
-// //syntax for saving data to localstorage
-// localStorage.setItem("key", "value");
-
-//Syntax for READING data from localStorage:
-//var lastname = localStorage.getItem("key");
-
-//Syntax for REMOVING data from localStorage:
-//localStorage.removeItem("key");
-
-
-
-// if (localStorage[".storage"]){
-//     var storage =
-// }
-
-// var saveButton = localStorage.setItem()
-
-
-
-
-//date time array, append to bootstrap date time
-
-// No longer need switch case
-
-// function dateTimetoString(dateTime) {
-//     switch(dateTime[]) {
-//       case '12 AM': return 0;
-//       case '1 AM': return 1;
-//       case '2 AM': return 2;
-//       case '3 AM': return 3;
-//       case "4 AM": return 4;
-//       case '5 AM': return 5;
-//       case '6 AM': return 6;
-//       case '7 AM': return 7;
-//       case "8 AM": return 8;
-//       case "9 AM": return 9;
-//       case "10 AM": return 10;
-//       case "11 AM": return 11;
-//       case "12 PM": return 12;
-//       case "1 PM": return 13;
-//       case "2 PM": return 14;
-//       case "3 PM": return 15;
-//       case "4 PM": return 16;
-//       case "5 PM": return 17;
-//       case "6 PM": return 18;
-//       case "7 PM": return 19;
-//       }
-      
-    //   console.log(dateTimetoString)
-//   }
-
-    // var timeString = $('.hour').text();
-    // var timeNumber = dateTimetoString(timeString);
-
-// '12 AM', '1 AM', '2 AM', '3 AM', '4 AM',
-// '1','2','3','4',
-// '1','2','3','4','5', '6', '7', 
-// '12 AM', '1 AM', '2 AM', '3 AM', '4 AM','5 AM', '6 AM', '7 AM', 

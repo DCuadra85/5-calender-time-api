@@ -1,3 +1,90 @@
+// $(document).ready(function() {
+    loadStorage();
+    console.log(loadStorage)
+
+  
+//.replace(/['"]+/g, '') may need this for loadstorage to work correctly.
+
+    function loadStorage(){
+        $('#text0').append(localStorage.getItem('8am'));
+        $('#text1').append(localStorage.getItem('9am'));
+        $('#text2').append(localStorage.getItem('10am'));
+        $('#text3').append(localStorage.getItem('11am'));
+        $('#text4').append(localStorage.getItem('12pm'));
+        $('#text5').append(localStorage.getItem('1pm'));
+        $('#text6').append(localStorage.getItem('2pm'));
+        $('#text7').append(localStorage.getItem('3pm'));
+        $('#text8').append(localStorage.getItem('4pm'));
+        $('#text9').append(localStorage.getItem('5pm'));
+        $('#text10').append(localStorage.getItem('6pm'));
+        $('#text11').append(localStorage.getItem('7pm'));
+        $('#text12').append(localStorage.getItem('8pm'));
+    }
+    
+
+
+    $("#saveButton0").on("click", function(){
+        var form0 = $("#text0").val()
+        localStorage.setItem('8am', JSON.stringify(form0))
+    })
+
+    $("#saveButton1").on("click", function(){
+        var form1 = $("#text1").val()
+        localStorage.setItem('9am', JSON.stringify(form1))
+    })
+
+    $("#saveButton2").on("click", function(){
+        var form2 = $("#text2").val()
+        localStorage.setItem('10am', JSON.stringify(form2))
+    })
+    $("#saveButton3").on("click", function(){
+        var form3 = $("#text3").val()
+        localStorage.setItem('11am', JSON.stringify(form3))
+    })
+
+    $("#saveButton4").on("click", function(){
+        var form4 = $("#text4").val()
+        localStorage.setItem('12pm', JSON.stringify(form4))
+    })
+
+    $("#saveButton5").on("click", function(){
+        var form5 = $("#text5").val()
+        localStorage.setItem('1pm', JSON.stringify(form5))
+    })
+    $("#saveButton6").on("click", function(){
+        var form6 = $("#text6").val()
+        localStorage.setItem('2pm', JSON.stringify(form6))
+    })
+
+    $("#saveButton7").on("click", function(){
+        var form7 = $("#text7").val()
+        localStorage.setItem('3pm', JSON.stringify(form7))
+    })
+
+    $("#saveButton8").on("click", function(){
+        var form8 = $("#text8").val()
+        localStorage.setItem('4pm', JSON.stringify(form8))
+    })
+    $("#saveButton9").on("click", function(){
+        var form9 = $("#text9").val()
+        localStorage.setItem('5pm', JSON.stringify(form9))
+    })
+
+    $("#saveButton10").on("click", function(){
+        var form10 = $("#text10").val()
+        localStorage.setItem('6pm', JSON.stringify(form10))
+    })
+
+    $("#saveButton11").on("click", function(){
+        var form11 = $("#text11").val()
+        localStorage.setItem('7pm', JSON.stringify(form11))
+    })
+
+    $("#saveButton12").on("click", function(){
+        var form12 = $("#text12").val()
+        localStorage.setItem('8pm', JSON.stringify(form12))
+    })
+// })
 
 var dateTime = ['8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
 // console.log(dateTime);
@@ -25,11 +112,10 @@ console.log(momentTime);
             // console.log(momentTime)
             $('.container').append(`
             
-            <div class = "row">
-                
-                <div class = "hour col-1">${dateTime[i]}</div>
-                <div class = "past pl-0 pr-0 col-8"><textarea value = ${arrayValue[i]} class = "storageArray"></textarea></div>
-                <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
+            <div id = "mod${arrayValue[i]}" class = "row">
+            <div class = "hour col-1">${dateTime[i]}</div>
+            <div class = "past pl-0 pr-0 col-8"><textarea id = "text${arrayValue[i]}" value = "hour${arrayValue[i]}" class = "storageArray"></textarea></div>
+            <button id = "saveButton${arrayValue[i]}" class = "saveBtn col-1"></button>
                 
             </div>
            
@@ -38,12 +124,11 @@ console.log(momentTime);
             // console.log(timeNumber)
             // console.log(momentTime)
             $('.container').append(`
-            
-            <div class = "row">
-                
+                            
+                <div id = "mod${arrayValue[i]}" class = "row">
                 <div class = "hour col-1">${dateTime[i]}</div>
-                <div class = "future pl-0 pr-0 col-8"><textarea value = ${arrayValue[i]} class= "storageArray"></textarea></div>
-                <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
+                <div class = "future pl-0 pr-0 col-8"><textarea id = "text${arrayValue[i]}" value = "hour${arrayValue[i]}" class = "storageArray"></textarea></div>
+                <button id = "saveButton${arrayValue[i]}" class = "saveBtn col-1"></button>
                 
             </div>
           
@@ -53,10 +138,10 @@ console.log(momentTime);
             // console.log(momentTime)
             $('.container').append(`
            
-            <div class = "row">
+                <div id = "mod${arrayValue[i]}" class = "row">
                 <div class = "hour col-1">${dateTime[i]}</div>
-                <div class = "present pl-0 pr-0 col-8"><textarea value = ${arrayValue[i]} class = "storageArray"></textarea></div>
-                <div class = "saveBtn col-1"><i class="fas fa-save pt-4 pl-4"></i></div>
+                <div class = "present pl-0 pr-0 col-8"><textarea class = id = "text${arrayValue[i]}" value = "hour${arrayValue[i]}" class = "storageArray"></textarea></div>
+                <button id = "saveButton${arrayValue[i]}" class = "saveBtn col-1"></button>
             
             </div>
             
@@ -69,22 +154,25 @@ console.log(momentTime);
 
 
 
+// $("saveBtn1").on("click", function(){
+//     var 
+// })
 
 
 
-function pageOpen(){
-    for (var i = 0; i < textarea.length; i++){
-        container.push(localStorage.getItem(i));
-        textarea[i].value = container[i]
-    }
-}
+// function pageOpen(){
+//     for (var i = 0; i < textarea.length; i++){
+//         container.push(localStorage.getItem(i));
+//         textarea[i].value = container[i]
+//     }
+// }
 
-$('.saveBtn').on('click', function(){
-    var btnSave = $timeSequence[i];
-    var textSave = text[btnSave].value;
+// $('.saveBtn').on('click', function(){
+//     var btnSave = arrayValue[i];
+//     var textSave = textarea[btnSave].value;
 
-    localStorage.setItem(btnSave, textSave)
-})
+//     localStorage.setItem(btnSave, textSave)
+// })
 
 
 calendarDisplay()

@@ -10,7 +10,7 @@
     console.log(this);
         var text = $(this).siblings('.textarea').val();
         console.log(text)
-        var time = $(this).parent().att('id');
+        var time = $(this).parent().attr('id');
         console.log(time)
 
         localStorage.setItem(time, text);

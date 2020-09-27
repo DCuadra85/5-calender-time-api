@@ -5,90 +5,90 @@
 
   
 //.replace(/['"]+/g, '') may need this for loadstorage to work correctly.
-    localStorage.setItem('hello', 'world');
-    localStorage.getItem('hello');
     
-
-    function loadStorage(){
-        $('#text0').append(localStorage.getItem('8am'));
-        $('#text1').append(localStorage.getItem('9am'));
-        $('#text2').append(localStorage.getItem('10am'));
-        $('#text3').append(localStorage.getItem('11am'));
-        $('#text4').append(localStorage.getItem('12pm'));
-        $('#text5').append(localStorage.getItem('1pm'));
-        $('#text6').append(localStorage.getItem('2pm'));
-        $('#text7').append(localStorage.getItem('3pm'));
-        $('#text8').append(localStorage.getItem('4pm'));
-        $('#text9').append(localStorage.getItem('5pm'));
-        $('#text10').append(localStorage.getItem('6pm'));
-        $('#text11').append(localStorage.getItem('7pm'));
-        $('#text12').append(localStorage.getItem('8pm'));
+    $(".saveBtn").on("click", function () {
+    console.log(this);
     }
+    // function loadStorage(){
+    //     $('#hour8').append(localStorage.getItem('hour8'));
+    //     $('#hour9').append(localStorage.getItem('hour9'));
+    //     $('#hour10').append(localStorage.getItem('hour10'));
+    //     $('#hour11').append(localStorage.getItem('hour11'));
+    //     $('#hour12').append(localStorage.getItem('hour12'));
+    //     $('#hour13').append(localStorage.getItem('hour13'));
+    //     $('#hour14').append(localStorage.getItem('hour14'));
+    //     $('#hour15').append(localStorage.getItem('hour15'));
+    //     $('#hour16').append(localStorage.getItem('hour16'));
+    //     $('#hour17').append(localStorage.getItem('hour17'));
+    //     $('#hour18').append(localStorage.getItem('hour18'));
+    //     $('#hour19').append(localStorage.getItem('hour19'));
+    //     $('#hour20').append(localStorage.getItem('hour20'));
+    // }
     
 
     // console.log($('#text0').val())
-    $("#saveButton0").on("click", function(){
-        var form0 = ($("#text0").val());
-        localStorage.setItem('8am', JSON.stringify(form0));
-        console.log(form0)
-    })
+    // $("#saveButton0").on("click", function(){
+    //     var form0 = ($("#text0").val());
+    //     localStorage.setItem('8am', JSON.stringify(form0));
+    //     console.log(form0)
+    // })
 
-    $("#saveButton1").on("click", function(){
-        var form1 = $("#text1").val();
-        localStorage.setItem('9am', JSON.stringify(form1));
-    })
+    // $("#saveButton1").on("click", function(){
+    //     var form1 = $("#text1").val();
+    //     localStorage.setItem('9am', JSON.stringify(form1));
+    // })
 
-    $("#saveButton2").on("click", function(){
-        var form2 = $("#text2").val();
-        localStorage.setItem('10am', JSON.stringify(form2));
-    })
-    $("#saveButton3").on("click", function(){
-        var form3 = $("#text3").val();
-        localStorage.setItem('11am', JSON.stringify(form3));
-    })
+    // $("#saveButton2").on("click", function(){
+    //     var form2 = $("#text2").val();
+    //     localStorage.setItem('10am', JSON.stringify(form2));
+    // })
+    // $("#saveButton3").on("click", function(){
+    //     var form3 = $("#text3").val();
+    //     localStorage.setItem('11am', JSON.stringify(form3));
+    // })
 
-    $("#saveButton4").on("click", function(){
-        var form4 = $("#text4").val();
-        localStorage.setItem('12pm', JSON.stringify(form4));
-    })
+    // $("#saveButton4").on("click", function(){
+    //     var form4 = $("#text4").val();
+    //     localStorage.setItem('12pm', JSON.stringify(form4));
+    // })
 
-    $("#saveButton5").on("click", function(){
-        var form5 = $("#text5").val();
-        localStorage.setItem('1pm', JSON.stringify(form5));
-    })
-    $("#saveButton6").on("click", function(){
-        var form6 = $("#text6").val();
-        localStorage.setItem('2pm', JSON.stringify(form6));
-    })
+    // $("#saveButton5").on("click", function(){
+    //     var form5 = $("#text5").val();
+    //     localStorage.setItem('1pm', JSON.stringify(form5));
+    // })
+    // $("#saveButton6").on("click", function(){
+    //     var form6 = $("#text6").val();
+    //     localStorage.setItem('2pm', JSON.stringify(form6));
+    // })
 
-    $("#saveButton7").on("click", function(){
-        var form7 = $("#text7").val();
-        localStorage.setItem('3pm', JSON.stringify(form7));
-    })
+    // $("#saveButton7").on("click", function(){
+    //     var form7 = $("#text7").val();
+    //     localStorage.setItem('3pm', JSON.stringify(form7));
+    // })
 
-    $("#saveButton8").on("click", function(){
-        var form8 = $("#text8").val();
-        localStorage.setItem('4pm', JSON.stringify(form8));
-    })
-    $("#saveButton9").on("click", function(){
-        var form9 = $("#text9").val();
-        localStorage.setItem('5pm', JSON.stringify(form9));
-    })
+    // $("#saveButton8").on("click", function(){
+    //     var form8 = $("#text8").val();
+    //     localStorage.setItem('4pm', JSON.stringify(form8));
+    // })
+    // $("#saveButton9").on("click", function(){
+    //     var form9 = $("#text9").val();
+    //     localStorage.setItem('5pm', JSON.stringify(form9));
+    // })
 
-    $("#saveButton10").on("click", function(){
-        var form10 = $("#text10").val();
-        localStorage.setItem('6pm', JSON.stringify(form10));
-    })
+    // $("#saveButton10").on("click", function(){
+    //     var form10 = $("#text10").val();
+    //     localStorage.setItem('6pm', JSON.stringify(form10));
+    // })
 
-    $("#saveButton11").on("click", function(){
-        var form11 = $("#text11").val();
-        localStorage.setItem('7pm', JSON.stringify(form11));
-    })
+    // $("#saveButton11").on("click", function(){
+    //     var form11 = $("#text11").val();
+    //     localStorage.setItem('7pm', JSON.stringify(form11));
+    // })
 
-    $("#saveButton12").on("click", function(){
-        var form12 = $("#text12").val();
-        localStorage.setItem('8pm', JSON.stringify(form12));
-    })
+    // $("#saveButton12").on("click", function(){
+    //     var form12 = $("#text12").val();
+    //     localStorage.setItem('8pm', JSON.stringify(form12));
+    // })
 // })
 
 var dateTime = ['8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];

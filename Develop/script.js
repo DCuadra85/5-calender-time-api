@@ -98,7 +98,7 @@
         $('.textarea19').append(localStorage.getItem('hour19'));
         $('.textarea20').append(localStorage.getItem('hour20'));
     }
- 
+    loadStorage()
 
 // })
 

@@ -109,7 +109,7 @@ console.log(momentTime);
 
     function calendarDisplay() {  
 
-        $(".time-block").each(function () {
+        $(".timeBlock").each(function () {
             var hourBlock = parseInt($(this).attr('id').split('hour')[1]);
             console.log(hourBlock, momentTime)    
             

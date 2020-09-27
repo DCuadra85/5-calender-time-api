@@ -1,29 +1,36 @@
 
-// $(document).ready(function() {
-    loadStorage();
-    console.log(loadStorage)
+// // $(document).ready(function() {
+//     loadStorage();
+//     console.log(loadStorage)
 
   
-//.replace(/['"]+/g, '') may need this for loadstorage to work correctly.
+// //.replace(/['"]+/g, '') may need this for loadstorage to work correctly.
     
     $(".saveBtn").on("click", function () {
     console.log(this);
+        var text = $(this).siblings('.textarea').val();
+        console.log(text)
+        var time = $(this).parent().att('id');
+        console.log(time)
+
+        localStorage.setItem(time, text);
+
+    })
+    function loadStorage(){
+        $('#hour8').append(localStorage.getItem('hour8'));
+        $('#hour9').append(localStorage.getItem('hour9'));
+        $('#hour10').append(localStorage.getItem('hour10'));
+        $('#hour11').append(localStorage.getItem('hour11'));
+        $('#hour12').append(localStorage.getItem('hour12'));
+        $('#hour13').append(localStorage.getItem('hour13'));
+        $('#hour14').append(localStorage.getItem('hour14'));
+        $('#hour15').append(localStorage.getItem('hour15'));
+        $('#hour16').append(localStorage.getItem('hour16'));
+        $('#hour17').append(localStorage.getItem('hour17'));
+        $('#hour18').append(localStorage.getItem('hour18'));
+        $('#hour19').append(localStorage.getItem('hour19'));
+        $('#hour20').append(localStorage.getItem('hour20'));
     }
-    // function loadStorage(){
-    //     $('#hour8').append(localStorage.getItem('hour8'));
-    //     $('#hour9').append(localStorage.getItem('hour9'));
-    //     $('#hour10').append(localStorage.getItem('hour10'));
-    //     $('#hour11').append(localStorage.getItem('hour11'));
-    //     $('#hour12').append(localStorage.getItem('hour12'));
-    //     $('#hour13').append(localStorage.getItem('hour13'));
-    //     $('#hour14').append(localStorage.getItem('hour14'));
-    //     $('#hour15').append(localStorage.getItem('hour15'));
-    //     $('#hour16').append(localStorage.getItem('hour16'));
-    //     $('#hour17').append(localStorage.getItem('hour17'));
-    //     $('#hour18').append(localStorage.getItem('hour18'));
-    //     $('#hour19').append(localStorage.getItem('hour19'));
-    //     $('#hour20').append(localStorage.getItem('hour20'));
-    // }
     
 
     // console.log($('#text0').val())

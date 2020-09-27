@@ -1,4 +1,3 @@
-
 // $(document).ready(function() {
     loadStorage();
     console.log(loadStorage)
@@ -94,6 +93,8 @@
 var dateTime = ['8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
 // console.log(dateTime);
 var timeSequence = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+// var timeSequenceString = ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8 pm']
+var arrayValue = [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
 
 var dateToday = moment().format("dddd, MMM Do ");
 // console.log(dateToday, "today's date test")
@@ -114,29 +115,55 @@ console.log(momentTime);
         if (timeSequence[i] < momentTime) {
             // console.log(timeNumber)
             // console.log(momentTime)
-        
-                $('.textarea').addClass("past")
-            ;
+            $('.container').append(`
+            
+            <div id = "mod${arrayValue[i]}" class = "row">
+            <div class = "hour col-1">${dateTime[i]}</div>
+            <div class = "past pl-0 pr-0 col-8"><textarea id = "text${arrayValue[i]}">test</textarea></div>
+            <button id = "saveButton${arrayValue[i]}" class = "saveBtn col-1"></button>
+                
+            </div>
+           
+            `);
+            console.log($('#text0').val())
           } else if (timeSequence[i] > momentTime) {
             // console.log(timeNumber)
             // console.log(momentTime)
-      
-                $('.textarea').addClass("future")
-            ;
+            $('.container').append(`
+                            
+                <div id = "mod${arrayValue[i]}" class = "row">
+                <div class = "hour col-1">${dateTime[i]}</div>
+                <div class = "future pl-0 pr-0 col-8"><textarea id = "text${arrayValue[i]}"></textarea></div>
+                <button id = "saveButton${arrayValue[i]}" class = "saveBtn col-1"></button>
+                
+            </div>
+          
+            `);
           } else {
             // console.log(timeNumber)
             // console.log(momentTime)
+            $('.container').append(`
            
-                $('.textarea').addClass("present")
-            ;
+                <div id = "mod${arrayValue[i]}" class = "row">
+                <div class = "hour col-1">${dateTime[i]}</div>
+                <div class = "present pl-0 pr-0 col-8"><textarea class = id = "text${arrayValue[i]}"></textarea></div>
+                <button id = "saveButton${arrayValue[i]}" class = "saveBtn col-1"></button>
+            
+            </div>
+            
+            `);
           }
         // console.log(timeNumber)
         // console.log(momentTime)
     }
 }
 
-// const storage = document.querySelectorAll('storageArray')
-// console.log(storage)
+
+
+// $("saveBtn1").on("click", function(){
+//     var 
+// })
+
 
 
 // function pageOpen(){
@@ -147,8 +174,8 @@ console.log(momentTime);
 // }
 
 // $('.saveBtn').on('click', function(){
-//     var btnSave = $timeSequence[i];
-//     var textSave = text[btnSave].value;
+//     var btnSave = arrayValue[i];
+//     var textSave = textarea[btnSave].value;
 
 //     localStorage.setItem(btnSave, textSave)
 // })
